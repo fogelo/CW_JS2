@@ -360,7 +360,7 @@ function getGrade(s1, s2, s3) {
 
 
 /*
-?14. Sum of Intervals
+§14. Sum of Intervals
 !4 kyu
 */
 
@@ -399,13 +399,23 @@ function sumIntervals(intervals){
 !8 kyu
 */
 
-function finalGrade(exam, projects) {
+/*function finalGrade(exam, projects) {
     return exam > 90 || projects > 10 ? 100
         : exam > 75 && projects >= 5 ? 90
             : exam > 50 && projects >= 2 ? 75
                 : 0
+}*/
+
+
+/*
+?16. Beginner Series #1 School Paperwork
+!8 kyu
+*/
+
+function paperwork(n, m) {
+    return n > 0 && m > 0 ? n * m : 0
 }
 
 
-const result = finalGrade(0, 3)
+const result = paperwork(3, 3)
 console.log(result)
