@@ -179,3 +179,40 @@ var uniqueInOrder = function (iterable) {
 }
 
 toCamelCase("the-stealth-warrior") */
+
+//? 7)
+
+/*
+39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
+999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
+4 --> 0 (because 4 is already a one-digit number)
+*/
+
+let recursionDepth = []
+
+function persistence(num) {
+    if(num<10){
+        return 0
+    }
+    let string = String(num)
+    console.log('string: ', string);
+    let strings = string.split('')
+    console.log('strings: ', strings);
+    let numbers = strings.map((item) => {
+        return Number(item)
+    })
+
+    console.log('numbers: ', numbers);
+
+    let pers = numbers.reduce((previousValue, item, index, arr) => {
+        return previousValue * item
+    })
+    recursionDepth.push('x')
+    if (pers >= 10) {
+        persistence(pers)
+    }
+    return recursionDepth.length
+}
+
+let result = persistence(9999)
+console.log('result: ', result);
