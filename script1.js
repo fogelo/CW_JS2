@@ -135,6 +135,7 @@ decodeMorse('...---... --..-- ......')*/
 uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 uniqueInOrder([1,2,2,3,3])       == [1,2,3]*/
 
+/*
 var uniqueInOrder = function (iterable) {
 
     if (!iterable[0] || iterable==='') {
@@ -160,4 +161,21 @@ var uniqueInOrder = function (iterable) {
         console.log(uniq2)
         return uniq2
     }
+}*/
+
+//? 6) Написать функцию, которая будет убирать подчеркивания и тире
+
+/* function toCamelCase(str) {
+    let strArr = [...str]
+    let newArr = []
+    strArr.reduce((previousValue, item, index, arr) => {
+        if (previousValue === '-') {
+            newArr.push(1)
+        } else {
+            newArr.push(2)
+        }
+    }, strArr[0])
+    console.log(newArr)
 }
+
+toCamelCase("the-stealth-warrior") */
