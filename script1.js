@@ -91,7 +91,7 @@ let morseAlphabet = ['.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '.
     '.---', '-.-', '.-..', '--', '-.', '---', '.--.', '--.-', '.-.',
     '...', '-', '..-', '...-', '.--', '-..-', '-.--', '--..','...---...','--..--','......']
      */
-decodeMorse = function (morseCode) {
+/*decodeMorse = function (morseCode) {
 
     let numbers = []
     let sentence = []
@@ -126,4 +126,38 @@ decodeMorse = function (morseCode) {
         return sentence.trim()
     }
 }
-decodeMorse('...---... --..-- ......')
+decodeMorse('...---... --..-- ......')*/
+
+
+//? 5) Написать функцию, которая будет возвращать массив без повторяющихся символвов
+
+/*uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+uniqueInOrder([1,2,2,3,3])       == [1,2,3]*/
+
+var uniqueInOrder = function (iterable) {
+
+    if (!iterable[0] || iterable==='') {
+        return []
+    }
+    else if (iterable) {
+        let uniq = []
+        let array = [...iterable]
+        // console.log(array)
+        array.reduce((previousValue, item, index, arr) => {
+            // console.log('previousValue: ', previousValue);
+            if (previousValue === item) {
+                return item
+                console.log(1)
+            } else {
+                uniq.push(item)
+                return item
+            }
+        }, array[0])
+        //your code here - remember iterable can be a string or an array
+        // console.log(uniq)/
+        let uniq2 = [array[0], ...uniq]
+        console.log(uniq2)
+        return uniq2
+    }
+}
