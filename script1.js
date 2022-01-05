@@ -188,7 +188,7 @@ toCamelCase("the-stealth-warrior") */
 4 --> 0 (because 4 is already a one-digit number)
 */
 
-let recursionDepth = []
+/*let recursionDepth = []
 
 function persistence(num) {
     if(num<10){
@@ -215,4 +215,4 @@ function persistence(num) {
 }
 
 let result = persistence(9999)
-console.log('result: ', result);
+console.log('result: ', result);*/

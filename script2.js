@@ -364,6 +364,7 @@ function getGrade(s1, s2, s3) {
 !4 kyu
 */
 
+/*
 //@Решение из интернета
 //! Реши еще и сам
 function sumIntervals(intervals){
@@ -390,4 +391,21 @@ function sumIntervals(intervals){
         result+=(intervals[i + 1] - intervals[i]);
     }
     return result;
+}*/
+
+
+/*
+?15. Student's Final Grade
+!8 kyu
+*/
+
+function finalGrade(exam, projects) {
+    return exam > 90 || projects > 10 ? 100
+        : exam > 75 && projects >= 5 ? 90
+            : exam > 50 && projects >= 2 ? 75
+                : 0
 }
+
+
+const result = finalGrade(0, 3)
+console.log(result)
