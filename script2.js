@@ -599,13 +599,22 @@ function solution(str) {
 !8 kyu
 */
 
-function summation(num) {
+/*function summation(num) {
     let result = 0;
     for (let i = 0; i <= num; i++) {
         result += i
     }
     return result
+}*/
+
+/*
+?30. Find the smallest integer in the array
+!8 kyu
+*/
+
+function findSmallestInt(args) {
+    return Math.min(...args)
 }
 
-const result = summation(8)
+const result = findSmallestInt([34, 15, 88, 2])
 console.log(result)
