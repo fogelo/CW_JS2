@@ -571,9 +571,19 @@ function boolToWord( bool ){
 !8 kyu
 */
 
-function repeatStr (n, s) {
+/*function repeatStr (n, s) {
     return s.repeat(n)
+}*/
+
+/*
+?28. Reversed Strings
+!8 kyu
+*/
+
+function solution(str){
+    return str.split('').reverse().join('')
 }
 
-const result = repeatStr(6, 'I')
+
+const result = solution(6, 'I')
 console.log(result)
