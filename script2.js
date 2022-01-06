@@ -429,7 +429,6 @@ function sumIntervals(intervals){
 }*/
 
 
-
 /*
 ?18. Points of Reflection
 !8 kyu
@@ -481,8 +480,25 @@ function hero(bullets, dragons){
 !8 kyu
 */
 
-function shortcut(string){
+/*function shortcut(string){
     return string.replace(/[aeiou]/g, '')
+}*/
+
+
+
+/*
+?22. Calculate BMI
+!8 kyu
+*/
+
+function bmi(weight, height) {
+    let bmi = weight / height ** 2
+    return bmi <= 18.5 ? "Underweight"
+        : bmi <= 25 ? "Normal"
+            : bmi <= 30 ? "Overweight"
+                : bmi > 30 ? "Obese"
+                    : ''
 }
-const result = shortcut('how are you today?')
-console.log(result)
+
+// const result = shortcut('how are you today?')
+// console.log(result)
