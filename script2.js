@@ -472,9 +472,17 @@ function hero(bullets, dragons){
 !8 kyu
 */
 
-function squareSum(numbers){
+/*function squareSum(numbers){
     return numbers.reduce(((prev, item)=> prev+item**2), 0)
-}
+}*/
 
-// const result = symmetricPoint([0, 0], [0, 0])
-// console.log(result)
+/*
+?21. Vowel remover
+!8 kyu
+*/
+
+function shortcut(string){
+    return string.replace(/[aeiou]/g, '')
+}
+const result = shortcut('how are you today?')
+console.log(result)
