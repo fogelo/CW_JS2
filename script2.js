@@ -524,18 +524,36 @@ function hero(bullets, dragons){
 !8 kyu
 */
 
-function makeNegative(num) {
+/*function makeNegative(num) {
     return num <= 0 ? num : num * -1
-}
+}*/
 
 /*
 ?25. Opposite number
 !8 kyu
 */
 
-function opposite(number) {
+/*function opposite(number) {
     return number * -1
-}
+}*/
 
-// const result = positiveSum([])
-// console.log(result)
+
+/*
+?25. Remove First and Last Character
+!8 kyu
+*/
+
+/*//@Мое решение
+function removeChar(str){
+    let arr = str.split('')
+    delete arr[0]
+    delete arr[arr.length-1]
+    return arr.join('')
+}*/
+
+//@best
+function removeChar(str) {
+    return str.slice(1, -1);
+}
+const result = removeChar('abv')
+console.log(result)
