@@ -617,13 +617,24 @@ function solution(str) {
 }*/
 
 /*
-?30. Remove String Spaces
+?31. Remove String Spaces
 !8 kyu
 */
 
+/*
 function noSpace(x){
     return x.replace(/\s/g,'')
 }
+*/
 
+
+/*
+?32. Counting sheep...
+!8 kyu
+*/
+
+function countSheeps(arrayOfSheep) {
+    return arrayOfSheep.filter((item)=>item).length
+}
 // const result = findSmallestInt([34, 15, 88, 2])
 // console.log(result)
