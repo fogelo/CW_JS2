@@ -485,19 +485,28 @@ function hero(bullets, dragons){
 }*/
 
 
-
 /*
 ?22. Calculate BMI
 !8 kyu
 */
 
-function bmi(weight, height) {
+/*function bmi(weight, height) {
     let bmi = weight / height ** 2
     return bmi <= 18.5 ? "Underweight"
         : bmi <= 25 ? "Normal"
             : bmi <= 30 ? "Overweight"
                 : bmi > 30 ? "Obese"
                     : ''
+}*/
+
+
+/*
+?22. Even or Odd
+!8 kyu
+*/
+
+function even_or_odd(number) {
+    return number % 2 === 0 ? 'Even' : 'Odd'
 }
 
 // const result = shortcut('how are you today?')
