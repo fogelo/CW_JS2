@@ -412,10 +412,23 @@ function sumIntervals(intervals){
 !8 kyu
 */
 
-function paperwork(n, m) {
+/*function paperwork(n, m) {
     return n > 0 && m > 0 ? n * m : 0
+}*/
+
+
+/*
+?17 DNA to RNA Conversion.
+!8 kyu
+
+"GCAT"  =>  "GCAU"
+*/
+
+function DNAtoRNA(dna) {
+     return dna.replace(/[T]/g, 'U')
 }
 
-
-const result = paperwork(3, 3)
+const result = DNAtoRNA("GUCT")
 console.log(result)
+
+
