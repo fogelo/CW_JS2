@@ -528,6 +528,14 @@ function makeNegative(num) {
     return num <= 0 ? num : num * -1
 }
 
+/*
+?25. Opposite number
+!8 kyu
+*/
+
+function opposite(number) {
+    return number * -1
+}
 
 // const result = positiveSum([])
 // console.log(result)
