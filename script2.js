@@ -580,7 +580,7 @@ function boolToWord( bool ){
 !8 kyu
 */
 
-function solution(str){
+function solution(str) {
     return str.split('').reverse().join('')
 }
 
@@ -590,9 +590,22 @@ function solution(str){
 !8 kyu
 */
 
-function numberToString(num) {
+/*function numberToString(num) {
     return num + ''
+}*/
+
+/*
+?29. Grasshopper - Summation
+!8 kyu
+*/
+
+function summation(num) {
+    let result = 0;
+    for (let i = 0; i <= num; i++) {
+        result += i
+    }
+    return result
 }
 
-// const result = solution(6, 'I')
-// console.log(result)
+const result = summation(8)
+console.log(result)
