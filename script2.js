@@ -585,5 +585,14 @@ function solution(str){
 }
 
 
-const result = solution(6, 'I')
-console.log(result)
+/*
+?28. Convert a Number to a String!
+!8 kyu
+*/
+
+function numberToString(num) {
+    return num + ''
+}
+
+// const result = solution(6, 'I')
+// console.log(result)
