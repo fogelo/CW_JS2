@@ -444,8 +444,36 @@ function sumIntervals(intervals){
 !8 kyu
 */
 
-function twiceAsOld(dadYearsOld, sonYearsOld) {
+/*function twiceAsOld(dadYearsOld, sonYearsOld) {
     return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}*/
+
+
+/*
+?20. Is he gonna survive?
+!8 kyu
+*/
+
+/*//@мое решение
+function hero(bullets, dragons){
+    return dragons/bullets*2 <= 1 ? true : false
+//Get Coding!
+}*/
+
+/*//@best practices
+//! когда есть операторы сравнения незачем явно возвращать true или false
+function hero(bullets, dragons){
+    return bullets >= dragons * 2
+}*/
+
+
+/*
+?21. Square(n) Sum
+!8 kyu
+*/
+
+function squareSum(numbers){
+    return numbers.reduce(((prev, item)=> prev+item**2), 0)
 }
 
 // const result = symmetricPoint([0, 0], [0, 0])
