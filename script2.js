@@ -435,9 +435,18 @@ function sumIntervals(intervals){
 !8 kyu
 */
 
-function symmetricPoint(p, q) {
+/*function symmetricPoint(p, q) {
     return [2*q[0]-p[0], 2*q[1]-p[1] ]
+}*/
+
+/*
+?19. Twice as old
+!8 kyu
+*/
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+    return Math.abs(dadYearsOld - 2 * sonYearsOld);
 }
 
-const result = symmetricPoint([0, 0], [0, 0])
-console.log(result)
+// const result = symmetricPoint([0, 0], [0, 0])
+// console.log(result)
