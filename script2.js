@@ -418,17 +418,26 @@ function sumIntervals(intervals){
 
 
 /*
-?17 DNA to RNA Conversion.
+§17 DNA to RNA Conversion.
 !8 kyu
 
 "GCAT"  =>  "GCAU"
 */
 
-function DNAtoRNA(dna) {
+/*function DNAtoRNA(dna) {
      return dna.replace(/[T]/g, 'U')
+}*/
+
+
+
+/*
+?18. Points of Reflection
+!8 kyu
+*/
+
+function symmetricPoint(p, q) {
+    return [2*q[0]-p[0], 2*q[1]-p[1] ]
 }
 
-const result = DNAtoRNA("GUCT")
+const result = symmetricPoint([0, 0], [0, 0])
 console.log(result)
-
-
