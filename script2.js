@@ -605,7 +605,6 @@ function summation(num) {
         result += i
     }
     return result
-
 }
 
 const result = summation(8)
