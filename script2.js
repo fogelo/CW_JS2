@@ -612,9 +612,18 @@ function solution(str) {
 !8 kyu
 */
 
-function findSmallestInt(args) {
+/*function findSmallestInt(args) {
     return Math.min(...args)
+}*/
+
+/*
+?30. Remove String Spaces
+!8 kyu
+*/
+
+function noSpace(x){
+    return x.replace(/\s/g,'')
 }
 
-const result = findSmallestInt([34, 15, 88, 2])
-console.log(result)
+// const result = findSmallestInt([34, 15, 88, 2])
+// console.log(result)
