@@ -505,9 +505,19 @@ function hero(bullets, dragons){
 !8 kyu
 */
 
-function even_or_odd(number) {
+/*function even_or_odd(number) {
     return number % 2 === 0 ? 'Even' : 'Odd'
+}*/
+
+/*
+?23. Sum of positive
+!8 kyu
+*/
+
+function positiveSum(arr) {
+    let positiveNumbers = arr.filter((item) => item >= 0)
+    return positiveNumbers.reduce((prev, item) => prev + item, 0)
 }
 
-// const result = shortcut('how are you today?')
-// console.log(result)
+const result = positiveSum([])
+console.log(result)
