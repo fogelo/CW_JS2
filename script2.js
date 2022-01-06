@@ -555,5 +555,15 @@ function removeChar(str){
 function removeChar(str) {
     return str.slice(1, -1);
 }
-const result = removeChar('abv')
-console.log(result)
+// const result = removeChar('abv')
+// console.log(result)
+
+
+/*
+?26. Convert boolean values to strings 'Yes' or 'No'.
+!8 kyu
+*/
+
+function boolToWord( bool ){
+    return bool ? 'Yes' : 'No'
+}
