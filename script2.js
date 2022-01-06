@@ -552,18 +552,28 @@ function removeChar(str){
 }*/
 
 //@best
-function removeChar(str) {
+/*function removeChar(str) {
     return str.slice(1, -1);
-}
-// const result = removeChar('abv')
-// console.log(result)
-
+}*/
 
 /*
 ?26. Convert boolean values to strings 'Yes' or 'No'.
 !8 kyu
 */
 
+/*
 function boolToWord( bool ){
     return bool ? 'Yes' : 'No'
+}*/
+
+/*
+?27. String repeat
+!8 kyu
+*/
+
+function repeatStr (n, s) {
+    return s.repeat(n)
 }
+
+const result = repeatStr(6, 'I')
+console.log(result)
