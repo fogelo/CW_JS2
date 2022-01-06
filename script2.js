@@ -514,10 +514,20 @@ function hero(bullets, dragons){
 !8 kyu
 */
 
-function positiveSum(arr) {
+/*function positiveSum(arr) {
     let positiveNumbers = arr.filter((item) => item >= 0)
     return positiveNumbers.reduce((prev, item) => prev + item, 0)
+}*/
+
+/*
+?24. Return Negative
+!8 kyu
+*/
+
+function makeNegative(num) {
+    return num <= 0 ? num : num * -1
 }
 
-const result = positiveSum([])
-console.log(result)
+
+// const result = positiveSum([])
+// console.log(result)
