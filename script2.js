@@ -629,18 +629,26 @@ function noSpace(x){
 
 
 
-
-
-
-
-
 /*
 ?32. Counting sheep...
 !8 kyu
 */
 
+/*
 function countSheeps(arrayOfSheep) {
     return arrayOfSheep.filter((item)=>item).length
 }
-// const result = findSmallestInt([34, 15, 88, 2])
-// console.log(result)
+*/
+
+/*
+?33. Vowel Count
+!7 kyu
+*/
+
+function getCount(str) {
+    return str.replace(/[^aeiou]/g, '').length
+}
+
+
+const result = getCount('abracadabra')
+console.log(result)
