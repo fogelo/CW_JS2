@@ -656,7 +656,19 @@ function countSheeps(arrayOfSheep) {
 !7 kyu
 */
 
-function squareDigits(num){
+/*function squareDigits(num){
     return Number(String(num).split('').map((item)=>item**2).join(''))
+}*/
+
+/*
+?34. Disemvowel Trolls
+!7 kyu
+*/
+
+function disemvowel(str) {
+    return str.replace(/[aeiou]/gi, '')
 }
 
+
+const result = disemvowel('hello')
+console.log(result)
