@@ -645,10 +645,18 @@ function countSheeps(arrayOfSheep) {
 !7 kyu
 */
 
-function getCount(str) {
+/*function getCount(str) {
     return str.replace(/[^aeiou]/g, '').length
+}*/
+
+
+
+/*
+?34. Square Every Digit
+!7 kyu
+*/
+
+function squareDigits(num){
+    return Number(String(num).split('').map((item)=>item**2).join(''))
 }
 
-
-const result = getCount('abracadabra')
-console.log(result)
