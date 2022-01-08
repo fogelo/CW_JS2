@@ -628,7 +628,6 @@ function noSpace(x){
 */
 
 
-
 /*
 ?32. Counting sheep...
 !8 kyu
@@ -650,7 +649,6 @@ function countSheeps(arrayOfSheep) {
 }*/
 
 
-
 /*
 ?34. Square Every Digit
 !7 kyu
@@ -665,10 +663,163 @@ function countSheeps(arrayOfSheep) {
 !7 kyu
 */
 
-function disemvowel(str) {
-    return str.replace(/[aeiou]/gi, '')
+// function disemvowel(str) {
+//     return str.replace(/[aeiou]/gi, '')
+// }
+
+
+// const result = disemvowel('hello')
+// console.log(result)
+
+
+/*let arr = ['a', 'e', 'C', 'd', 'b',]
+arr.test = 2
+console.log((arr))*/
+
+// pop, push, shift, unshift
+// splice((от0, до2, 'f'))
+// sort((a,b)=>a-b)
+// reverse()
+//fill(value, start, end)
+
+
+// map((ite, index, arr)=> item+'1')
+// forEach((item, index, arr)=>console.log(item))
+// reduce((prev, item, index, arr) => prev + item, '')
+// find((item, index, arr)=>item>0)
+// findIndex((item, index, arr))
+// some((item, index, arr)=>item>0)
+// ever((item, index, arr)=>item>0)
+// filter((item, index, arr)=>item>0)
+//concat(arr)
+
+
+// inludes(item, from)
+// indexOf(item, from)
+// indexLastOf(item, from)
+
+//split(' ')
+//join('')
+
+
+//§      spread (...) -  оператор разворачивает в отдельные элементы
+
+
+/*
+//SPREAD с массивами
+const citiesRussia = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Казань']
+const citiesEurope = ['Берлин', 'Прага', 'Париж']
+
+//можно разворичивать массив (разобрать его на отдельные элементы)
+console.log(...citiesRussia)
+
+//можно копировать и соединять массивы
+const allCities = [...citiesRussia, 'Вашингтон', ...citiesEurope]
+console.log(allCities)
+*/
+
+
+/*//SPREAD с объектами
+const citiesRussiaPopulation = {
+    Moscow: 15,
+    Kazan: 3,
+    Novosibirsk: 2,
 }
 
+const citiesEuropePopulation = {
+    Berlin: 10,
+    Praga: 5,
+    Paris: 2,
+}
 
-const result = disemvowel('hello')
-console.log(result)
+//можно также копировать и соединять объекты
+console.log({ ...citiesRussiaPopulation })
+console.log({ ...citiesRussiaPopulation, ...citiesEuropePopulation })
+
+//СОЗДАНИЕ ГЛУБОКОЙ КОПИИ С ПОМОЩЬЮ SPREAD ОПЕРАТОРА
+const person = {
+    name: 'anton',
+    age: 20,
+    adress: {
+        country: 'Russia',
+        city: 'Moscow'
+    }
+}*/
+
+/*
+//делаем глубокую копию объекта
+const person2 = {...person}
+person2.adress = {...person.adress}
+
+//можно сделать глубоку копию синтаксически короче, чем это написан выше
+const person2 = {...person, adress: {...person.adress}}
+
+
+//Проверка что объекты разные
+person.name = 'ivan'
+person.adress.city = 'Novosibirsk'
+console.log('person: ', person);
+console.log('person2: ', person2);
+*/
+
+
+/*const arr = [1, [3, 2], [3, [4]]];
+const copyArr = [...arr]
+arr.push(42)
+arr[1].push(42)
+console.log(arr)
+console.log(copyArr)*/
+
+
+const person = {
+    name: 'anton',
+    age: 20,
+    adress: {
+        country: 'Russia',
+        city: 'Moscow'
+    }
+}
+
+//как создать глубокую копию объекта любой вложенности
+
+// const {name, age, adress, country: } = person
+
+
+// console.log(name)
+// console.log(age)
+// console.log(adress)
+
+// const product = {
+//     price: 3990,
+//     options: [
+//         {
+//             id: 1,
+//             title: '256ГБ',
+//             price: 450,
+//         },
+//         {
+//             id: 2,
+//             title: '512ГБ',
+//             price: 990,
+//         }
+//     ],
+//     info: {
+//         screen: {
+//             size: {
+//                 width: 1920,
+//                 height: 1080
+//             }
+//         }
+//     }
+// }
+
+// const {info: {screen: {size: {width, main = 145}}}} = product
+// console.log(width, main)
+
+
+
+let player = {score: 1, name: 'Джефф'};
+let newPlayer = Object.assign({}, player, {score: 2}, {age: 23}); // as sign - назначить, присвоить
+
+console.log(player)
+console.log(newPlayer)
