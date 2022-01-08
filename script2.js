@@ -820,6 +820,7 @@ const person = {
 
 let player = {score: 1, name: 'Джефф'};
 let newPlayer = Object.assign({}, player, {score: 2}, {age: 23}); // as sign - назначить, присвоить
+//{} - это модифицированный объект
 
 console.log(player)
 console.log(newPlayer)
