@@ -1,3 +1,6 @@
+// import {cloneDeep} from "lodash";
+
+
 /*§CW_JS*/
 
 /*?1. написать функцию, которая из строки будет делать hashtag*/
@@ -701,126 +704,66 @@ console.log((arr))*/
 //split(' ')
 //join('')
 
+//§ Задачка от Лехи!
+const initialArray = [
+    {id: 1, name: "item one", tags: ["music", "sport", "science"]},
+    {id: 2, name: "item two", tags: ["music"]},
+    {id: 3, name: "item three", tags: ["fun"]},
+    {id: 4, name: "item four", tags: ["sport", "science"]},
+    {id: 5, name: "item five", tags: []},
+    {id: 6, name: "item six", tags: ["sport"]},
+    {id: 7, name: "item seven", tags: []},
+    {id: 8, name: "item eight", tags: ["music", "sport", "science"]},
+];
 
-//§      spread (...) -  оператор разворачивает в отдельные элементы
+function makeCorrectResult(initialArray) {
+    let allTags = []
 
-
-/*
-//SPREAD с массивами
-const citiesRussia = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Казань']
-const citiesEurope = ['Берлин', 'Прага', 'Париж']
-
-//можно разворичивать массив (разобрать его на отдельные элементы)
-console.log(...citiesRussia)
-
-//можно копировать и соединять массивы
-const allCities = [...citiesRussia, 'Вашингтон', ...citiesEurope]
-console.log(allCities)
-*/
-
-
-/*//SPREAD с объектами
-const citiesRussiaPopulation = {
-    Moscow: 15,
-    Kazan: 3,
-    Novosibirsk: 2,
-}
-
-const citiesEuropePopulation = {
-    Berlin: 10,
-    Praga: 5,
-    Paris: 2,
-}
-
-//можно также копировать и соединять объекты
-console.log({ ...citiesRussiaPopulation })
-console.log({ ...citiesRussiaPopulation, ...citiesEuropePopulation })
-
-//СОЗДАНИЕ ГЛУБОКОЙ КОПИИ С ПОМОЩЬЮ SPREAD ОПЕРАТОРА
-const person = {
-    name: 'anton',
-    age: 20,
-    adress: {
-        country: 'Russia',
-        city: 'Moscow'
+    for (let i = 0; i < initialArray.length; i++) {
+        initialArray[i].tags.forEach((item) => allTags.push(item))
     }
-}*/
 
-/*
-//делаем глубокую копию объекта
-const person2 = {...person}
-person2.adress = {...person.adress}
+    let uniqTags = [...new Set(allTags)]
 
-//можно сделать глубоку копию синтаксически короче, чем это написан выше
-const person2 = {...person, adress: {...person.adress}}
-
-
-//Проверка что объекты разные
-person.name = 'ivan'
-person.adress.city = 'Novosibirsk'
-console.log('person: ', person);
-console.log('person2: ', person2);
-*/
-
-
-/*const arr = [1, [3, 2], [3, [4]]];
-const copyArr = [...arr]
-arr.push(42)
-arr[1].push(42)
-console.log(arr)
-console.log(copyArr)*/
-
-
-const person = {
-    name: 'anton',
-    age: 20,
-    adress: {
-        country: 'Russia',
-        city: 'Moscow'
+    let result = {}
+    result['without tags'] = []
+    for (let i = 0; i < uniqTags.length; i++) {
+        result[uniqTags[i]] = []
     }
+
+    uniqTags.forEach((item) => {
+        for (let i = 0; i < initialArray.length; i++) {
+            if (initialArray[i].tags.includes(item)) {
+                result[item].push(initialArray[i])
+            }
+        }
+        result[item].reverse()
+    })
+    for (let i = 0; i < initialArray.length; i++) {
+        if (initialArray[i].tags.length === 0) {
+            result['without tags'].push(initialArray[i])
+        }
+    }
+    return result
 }
 
-//как создать глубокую копию объекта любой вложенности
-
-// const {name, age, adress, country: } = person
-
-
-// console.log(name)
-// console.log(age)
-// console.log(adress)
-
-// const product = {
-//     price: 3990,
-//     options: [
-//         {
-//             id: 1,
-//             title: '256ГБ',
-//             price: 450,
-//         },
-//         {
-//             id: 2,
-//             title: '512ГБ',
-//             price: 990,
-//         }
-//     ],
-//     info: {
-//         screen: {
-//             size: {
-//                 width: 1920,
-//                 height: 1080
-//             }
-//         }
-//     }
-// }
-
-// const {info: {screen: {size: {width, main = 145}}}} = product
-// console.log(width, main)
-
-
-
-let player = {score: 1, name: 'Джефф'};
-let newPlayer = Object.assign({}, player, {score: 2}, {age: 23}); // as sign - назначить, присвоить
-//{} - это модифицированный объект
-
-console.log(player)
-console.log(newPlayer)
+const correctResult = makeCorrectResult(initialArray)
+console.log(correctResult)
+/*
+export const correctResult = {
+    sport: [
+        { id: 6, name: "item six", tags: ["sport"] },
+        { id: 4, name: "item four", tags: ["sport", "science"] },
+        { id: 1, name: "item one", tags: ["music", "sport", "science"] }
+    ],
+    music: [
+        { id: 2, name: "item two", tags: ["music"] },
+        { id: 1, name: "item one", tags: ["music", "sport", "science"] }
+    ],
+    science: [
+        { id: 1, name: "item one", tags: ["music", "sport", "science"] },
+        { id: 4, name: "item four", tags: ["sport", "science"] }
+    ],
+    fun: [{ id: 3, name: "item three", tags: ["fun"] }],
+    "without tag": [{ id: 5, name: "item five", tags: [] }]
+};*/
