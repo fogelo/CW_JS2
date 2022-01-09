@@ -705,6 +705,7 @@ console.log((arr))*/
 //join('')
 
 //§ Задачка от Лехи!
+/*
 const initialArray = [
     {id: 1, name: "item one", tags: ["music", "sport", "science"]},
     {id: 2, name: "item two", tags: ["music"]},
@@ -724,6 +725,11 @@ function makeCorrectResult(initialArray) {
     }
 
     let uniqTags = [...new Set(allTags)]
+
+//еще один способ получить массив без повторяющихся элементов
+// let uniqTags = allTags.filter((item, index)=>{
+//     return !allTags.includes(item, index+1)
+// })
 
     let result = {}
     result['without tags'] = []
@@ -749,7 +755,7 @@ function makeCorrectResult(initialArray) {
 
 const correctResult = makeCorrectResult(initialArray)
 console.log(correctResult)
-/*
+/!*
 export const correctResult = {
     sport: [
         { id: 6, name: "item six", tags: ["sport"] },
@@ -766,4 +772,26 @@ export const correctResult = {
     ],
     fun: [{ id: 3, name: "item three", tags: ["fun"] }],
     "without tag": [{ id: 5, name: "item five", tags: [] }]
-};*/
+};*!/
+*/
+
+//§ задачка с собеса!
+// 4565
+// 1000, 500, 100, 50, 5
+// { '5': 3, '50': 1, '100': 0, '500': 1, '1000': 4 }
+// Math.floor(price / el)
+
+/*
+const arr = [1000, 500, 100, 50, 5];
+const price1 = 4565;
+
+let bank = {}
+let price = price1;
+
+for (let i = 0; i < arr.length; i++) {
+    bank[arr[i]] = Math.floor(price / arr[i])
+    price = price - arr[i] * Math.floor(price / arr[i])
+}
+
+console.log(bank)*/
+
