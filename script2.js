@@ -705,6 +705,7 @@ console.log((arr))*/
 //join('')
 
 //§ Задачка от Лехи!
+
 /*
 const initialArray = [
     {id: 1, name: "item one", tags: ["music", "sport", "science"]},
@@ -755,8 +756,9 @@ function makeCorrectResult(initialArray) {
 
 const correctResult = makeCorrectResult(initialArray)
 console.log(correctResult)
-/!*
-export const correctResult = {
+*/
+
+/*export const correctResult = {
     sport: [
         { id: 6, name: "item six", tags: ["sport"] },
         { id: 4, name: "item four", tags: ["sport", "science"] },
@@ -772,8 +774,8 @@ export const correctResult = {
     ],
     fun: [{ id: 3, name: "item three", tags: ["fun"] }],
     "without tag": [{ id: 5, name: "item five", tags: [] }]
-};*!/
-*/
+};*/
+
 
 //§ задачка с собеса!
 // 4565
@@ -794,4 +796,12 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 console.log(bank)*/
+
+/*
+?34. Disemvowel Trolls
+!7 kyu
+*/
+
+
+
 
