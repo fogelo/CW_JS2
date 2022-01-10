@@ -41,6 +41,7 @@ console.log(result)*/
 ?3. You're a square!
 */
 
+/*
 //@мое решение
 function isSquare(n) {
     return Math.floor(Math.sqrt(n)) ** 2 === n ? true : false
@@ -51,5 +52,20 @@ function isSquare(n) {
     return Math.sqrt(n) % 1 === 0;
 }
 
-const result = isSquare(84)
+/*
+§4. Isograms
+*/
+
+//@ мое
+/*function isIsogram(str) {
+    return [...new Set(str.toLowerCase())].join('') === str.toLowerCase()
+}*/
+
+//best
+function isIsogram(str) {
+    return /(\w).*\1/i.test(str)
+}
+
+
+const result = isIsogram('dddd')
 console.log(result)
