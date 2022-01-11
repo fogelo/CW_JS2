@@ -79,9 +79,19 @@ filter_list([1,2,'aasf','1','123',123]) == [1,2,123]*/
     return l.filter(item => item !== item.toString())
 }*/
 //@ мое №2
-function filter_list(l) {
+/*function filter_list(l) {
     return l.filter(item => typeof item === 'number')
-}
+}*/
 
-const result = filter_list([1, 'a', 'b', 0, 15])
+/*const result = filter_list([1, 'a', 'b', 0, 15])
+console.log(result)*/
+
+/*?6. Shortest Word*/
+
+//@ мое
+function findShort(s) {
+    let arr = s.split(' ').map(item=>item.length).sort((a,b)=>a-b)
+    return arr[0]
+}
+const result = findShort("Lisk Classic Steem Ethereum ProofOfStake BTC Monero Mine Classic")
 console.log(result)
