@@ -88,10 +88,31 @@ console.log(result)*/
 
 /*?6. Shortest Word*/
 
+/*
 //@ мое
 function findShort(s) {
     let arr = s.split(' ').map(item=>item.length).sort((a,b)=>a-b)
     return arr[0]
 }
 const result = findShort("Lisk Classic Steem Ethereum ProofOfStake BTC Monero Mine Classic")
+console.log(result)*/
+
+
+/*?7. Exes and Ohs*/
+//@ мое решение
+/*function XO(str) {
+    let o = str.match(/o/gi)
+    let x = str.match(/x/gi)
+    return o === null && x === null ? true
+        : o === null && x ? false
+            : o && x === null ? false : o.length === x.length
+}*/
+
+//@ best
+function XO(str) {
+    let x = str.match(/x/gi);
+    let o = str.match(/o/gi);
+    return (x && x.length) === (o && o.length);
+}
+const result = XO('')
 console.log(result)
