@@ -109,10 +109,33 @@ console.log(result)*/
 }*/
 
 //@ best
+/*
 function XO(str) {
     let x = str.match(/x/gi);
     let o = str.match(/o/gi);
     return (x && x.length) === (o && o.length);
 }
 const result = XO('')
+console.log(result)
+*/
+
+/*?8. Complementary DNA*/
+
+/*"ATTGC" --> "TAACG"
+"GTAT" --> "CATA"
+dnaStrand []        `shouldBe` []
+dnaStrand [A,T,G,C] `shouldBe` [T,A,C,G]
+dnaStrand [G,T,A,T] `shouldBe` [C,A,T,A]
+dnaStrand [A,A,A,A] `shouldBe` [T,T,T,T]*/
+
+function DNAStrand(dna) {
+    return dna.split('').map((item => {
+        return item === 'A' ? 'T'
+            : item === 'T' ? 'A'
+                : item === 'G' ? 'C'
+                : item === 'C' ? 'G': ''
+    })).join('')
+}
+
+const result = DNAStrand("ATTGC")
 console.log(result)
