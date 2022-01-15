@@ -128,7 +128,7 @@ dnaStrand [A,T,G,C] `shouldBe` [T,A,C,G]
 dnaStrand [G,T,A,T] `shouldBe` [C,A,T,A]
 dnaStrand [A,A,A,A] `shouldBe` [T,T,T,T]*/
 
-function DNAStrand(dna) {
+/*function DNAStrand(dna) {
     return dna.split('').map((item => {
         return item === 'A' ? 'T'
             : item === 'T' ? 'A'
@@ -138,4 +138,52 @@ function DNAStrand(dna) {
 }
 
 const result = DNAStrand("ATTGC")
+console.log(result)*/
+
+/*§9 Credit Card Mask*/
+//@ мое решение
+/*function maskify(cc) {
+    if (cc.length >= 4) {
+        let arr = cc.replace(/(\w{4}$)/, '_$1').split('_')
+        return arr[0].split('').fill('#').join('') + arr[1]
+    } else {
+        return cc
+    }
+}*/
+
+//@ best  №1
+/*function maskify(cc) {
+    // оказывается slice умеет копировать элементы с конца строки
+    console.log(cc)
+    // console.log(cc.slice(0, -4)) // это slice скопирует символы от 0 (отсчет с начала) до (-4 отсчет с конца)
+    // console.log(cc.slice(-4)) // этот slice скопирует 4 символа с конца строки
+    console.log(cc.slice(4)) // этот slice скопирует 4 символа с конца строки
+    return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
+}
+*/
+
+//@ best №2
+/*
+function maskify(cc) {
+    //replace найдет все символы после которых есть 4 символа, то есть не найдет только последние 4 символа
+    return cc.replace(/.(?=....)/g, '#');
+}
+
+const result = maskify("4556364607935616")
+console.log(result)*/
+
+/*?10 Credit Card Mask*/
+
+function getSum(a, b) {
+    let args = [a, b]
+    args.sort((x, y) => x - y)
+    let [x, y] = args
+    let result = 0
+    for (let i = x; i <= y; i++) {
+        result += i
+    }
+    return x === y ? a : result
+}
+
+const result = getSum(0, -1)
 console.log(result)
