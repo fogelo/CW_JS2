@@ -174,6 +174,7 @@ console.log(result)*/
 
 /*?10 Credit Card Mask*/
 
+/*
 function getSum(a, b) {
     let args = [a, b]
     args.sort((x, y) => x - y)
@@ -186,4 +187,13 @@ function getSum(a, b) {
 }
 
 const result = getSum(0, -1)
+console.log(result)*/
+
+/*?11 Sum of two lowest positive integers*/
+function sumTwoSmallestNumbers(numbers) {
+ numbers.sort((a,b)=>a-b)
+    return numbers[0] + numbers[1]
+}
+
+const result = sumTwoSmallestNumbers([19, 5, 42, 2, 77])
 console.log(result)
