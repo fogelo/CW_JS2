@@ -216,3 +216,4 @@ function persistence(num) {
 
 let result = persistence(9999)
 console.log('result: ', result);*/
+

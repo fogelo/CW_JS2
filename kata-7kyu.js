@@ -190,10 +190,19 @@ const result = getSum(0, -1)
 console.log(result)*/
 
 /*?11 Sum of two lowest positive integers*/
-function sumTwoSmallestNumbers(numbers) {
+/*function sumTwoSmallestNumbers(numbers) {
  numbers.sort((a,b)=>a-b)
     return numbers[0] + numbers[1]
 }
 
 const result = sumTwoSmallestNumbers([19, 5, 42, 2, 77])
+console.log(result)*/
+
+/*?12 Two to One*/
+
+function longest(s1, s2) {
+    return [...new Set([...s1, ...s2])].sort().join('')
+}
+
+const result = longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq')
 console.log(result)
