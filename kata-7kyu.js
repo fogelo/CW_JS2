@@ -208,7 +208,7 @@ const result = longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq')
 console.log(result)*/
 
 /*§13 Growth of a Population*/
-function nbYear(p0, percent, aug, p) {
+/*function nbYear(p0, percent, aug, p) {
     let result = p0
     let years = 0
     while (result < p) {
@@ -218,7 +218,14 @@ function nbYear(p0, percent, aug, p) {
     return years
 }
 
-const result = nbYear(1500, 5, 100, 5000)
-console.log(result)
-console.log(1500 + 1500 * 0.05 + 100)
+const result = nbYear(1500, 5, 100, 5000)*/
 
+/*?14 Find the next perfect square!*/
+function findNextSquare(sq) {
+    if (Math.sqrt(sq) % 1 === 0) {
+        return Math.pow(Math.sqrt(sq) + 1, 2);
+    } else return -1
+}
+
+const result = findNextSquare(155)
+console.log(result)
