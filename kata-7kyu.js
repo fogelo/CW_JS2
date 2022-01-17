@@ -200,9 +200,25 @@ console.log(result)*/
 
 /*?12 Two to One*/
 
-function longest(s1, s2) {
+/*function longest(s1, s2) {
     return [...new Set([...s1, ...s2])].sort().join('')
 }
 
 const result = longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq')
+console.log(result)*/
+
+/*§13 Growth of a Population*/
+function nbYear(p0, percent, aug, p) {
+    let result = p0
+    let years = 0
+    while (result < p) {
+        result += result * percent/100 + aug    //result = result + result * percent/100 + aug
+        years+=1
+    }
+    return years
+}
+
+const result = nbYear(1500, 5, 100, 5000)
 console.log(result)
+console.log(1500 + 1500 * 0.05 + 100)
+
