@@ -221,11 +221,20 @@ console.log(result)*/
 const result = nbYear(1500, 5, 100, 5000)*/
 
 /*?14 Find the next perfect square!*/
-function findNextSquare(sq) {
+/*function findNextSquare(sq) {
     if (Math.sqrt(sq) % 1 === 0) {
         return Math.pow(Math.sqrt(sq) + 1, 2);
     } else return -1
 }
 
 const result = findNextSquare(155)
+console.log(result)*/
+
+/*?15 Regex validate PIN code*/
+
+function validatePIN (pin) {
+    return /^(\d{4}|\d{6})$/.test(pin)
+}
+
+const result = validatePIN('123455')
 console.log(result)
