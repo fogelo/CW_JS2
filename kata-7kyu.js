@@ -232,9 +232,18 @@ console.log(result)*/
 
 /*?15 Regex validate PIN code*/
 
+/*
 function validatePIN (pin) {
     return /^(\d{4}|\d{6})$/.test(pin)
 }
 
 const result = validatePIN('123455')
+console.log(result)*/
+
+/*?16 Friend or Foe?*/
+function friend(friends) {
+    return friends.filter(item => item.length === 4)
+}
+
+const result = friend(["Ryan", "Kieran", "Mark"])
 console.log(result)
