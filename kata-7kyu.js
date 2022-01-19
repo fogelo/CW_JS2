@@ -241,9 +241,24 @@ const result = validatePIN('123455')
 console.log(result)*/
 
 /*?16 Friend or Foe?*/
-function friend(friends) {
+/*function friend(friends) {
     return friends.filter(item => item.length === 4)
 }
 
 const result = friend(["Ryan", "Kieran", "Mark"])
+console.log(result)*/
+
+/*?17 Categorize New Member*/
+/*//@мое решение
+function openOrSenior(data) {
+    return data.map(item => item[0] >= 55 && item[1] >= 7 ? 'Senior' : 'Open')
+}*/
+
+
+//@best (просто чтобы запомнить что можно деструктуризировать массив при передаче в функцию сразу в скобках где указываем параметры)
+function openOrSenior(data){
+    return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+}
+
+const result = openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]])
 console.log(result)
