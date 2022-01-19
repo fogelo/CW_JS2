@@ -255,10 +255,19 @@ function openOrSenior(data) {
 }*/
 
 
-//@best (просто чтобы запомнить что можно деструктуризировать массив при передаче в функцию сразу в скобках где указываем параметры)
+/*//@best (вставил сюда просто, чтобы запомнить что можно деструктуризировать массив при передаче в функцию сразу в скобках где указываем параметры)
 function openOrSenior(data){
     return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
 }
 
 const result = openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]])
+console.log(result)*/
+
+/*?18 */
+
+function isTriangle(a, b, c) {
+    return a + b > c && a + c > b && b + c > a;
+}
+
+const result = isTriangle(1, 2, 2)
 console.log(result)
