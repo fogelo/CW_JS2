@@ -263,11 +263,27 @@ function openOrSenior(data){
 const result = openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]])
 console.log(result)*/
 
-/*?18 */
+/*?18 isTriangle*/
 
-function isTriangle(a, b, c) {
+/*function isTriangle(a, b, c) {
     return a + b > c && a + c > b && b + c > a;
 }
 
 const result = isTriangle(1, 2, 2)
+console.log(result)*/
+
+
+/*?19 Number of People in the Bus*/
+//@ мое решение
+/*function number(busStops) {
+   return busStops.map(item=>item[0]-item[1]).reduce((prev,item)=>prev+item, 0)
+}*/
+
+//@ best (немного лучше чем сделал я, просто можно было не делать map, а деструктурировать массив при передаче)
+function number(busStops) {
+   return  busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+}
+
+
+const result = number([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]])
 console.log(result)
