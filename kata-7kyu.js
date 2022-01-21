@@ -280,10 +280,19 @@ console.log(result)*/
 }*/
 
 //@ best (немного лучше чем сделал я, просто можно было не делать map, а деструктурировать массив при передаче)
-function number(busStops) {
+/*function number(busStops) {
    return  busStops.reduce((rem, [on, off]) => rem + on - off, 0);
 }
 
-
 const result = number([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]])
+console.log(result)*/
+
+/*?20 Printer Errors*/
+
+function printerError(s) {
+    return s.match(/[^a-m]/g) !== null ? `${s.match(/[^a-m]/g).length}/${s.length}` :  `0/${s.length}`
+}
+
+const result = printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")
 console.log(result)
+
