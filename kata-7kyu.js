@@ -289,10 +289,18 @@ console.log(result)*/
 
 /*?20 Printer Errors*/
 
-function printerError(s) {
+/*function printerError(s) {
     return s.match(/[^a-m]/g) !== null ? `${s.match(/[^a-m]/g).length}/${s.length}` :  `0/${s.length}`
 }
 
 const result = printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")
+console.log(result)*/
+
+/*?20 Binary Addition*/
+function addBinary(a, b) {
+    return (a+b).toString(2)
+}
+
+const result = addBinary(2, 5)
 console.log(result)
 
