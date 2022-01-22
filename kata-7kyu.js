@@ -297,10 +297,25 @@ const result = printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmm
 console.log(result)*/
 
 /*?20 Binary Addition*/
-function addBinary(a, b) {
+/*function addBinary(a, b) {
     return (a+b).toString(2)
 }
 
 const result = addBinary(2, 5)
-console.log(result)
+console.log(result)*/
 
+/*?20 Odd or Even?*/
+//@ мое решение
+/*function oddOrEven(array) {
+    if (array.length === 0)
+        return 'even'
+    let sum = array.reduce((prev, item) => prev + item)
+    return sum % 2 === 0 || sum === 0 ? 'even' : 'odd'
+}*/
+
+//@ best
+function oddOrEven(arr) {
+    return arr.reduce((a,b)=>a+b,0)
+}
+const result = oddOrEven([])
+console.log(result)
