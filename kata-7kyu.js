@@ -313,9 +313,24 @@ console.log(result)*/
     return sum % 2 === 0 || sum === 0 ? 'even' : 'odd'
 }*/
 
+/*
 //@ best
 function oddOrEven(arr) {
     return arr.reduce((a,b)=>a+b,0)
 }
 const result = oddOrEven([])
+console.log(result)*/
+
+/*?20 String ends with?*/
+/*//@ мое решение
+function solution(str, ending) {
+    return ending === '' ? true : str.slice(-ending.length) === ending
+}*/
+
+
+//@ best
+function solution(str, ending){
+    return str.endsWith(ending);
+}
+const result = solution('abcdeab', '')
 console.log(result)
