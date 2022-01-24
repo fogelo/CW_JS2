@@ -328,9 +328,37 @@ function solution(str, ending) {
 }*/
 
 
+/*
 //@ best
 function solution(str, ending){
     return str.endsWith(ending);
 }
 const result = solution('abcdeab', '')
+console.log(result)
+*/
+
+
+/*?21 Sum of the first nth term of Series*/
+//@ my
+
+/*function SeriesSum(n) {
+    let arr = [1]
+    for (let i = 0; i < n - 1; i++) {
+        arr.push(arr[i] + 3)
+    }
+    return n === 0 ? '0.00'
+        : String(Math.round(arr.map(item => 1 / item).reduce((prev, item) => prev + item, 0) * 100))
+            .replace(/(?<=^\w)/, '.')
+}*/
+
+//@ best
+function SeriesSum(n) {
+    for (var s = 0, i = 0; i < n; i++) {
+         s += 1 / (1 + i * 3)
+    }
+
+    return s.toFixed(2)
+}
+
+const result = SeriesSum(5)
 console.log(result)
