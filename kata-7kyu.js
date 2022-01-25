@@ -351,6 +351,7 @@ console.log(result)
             .replace(/(?<=^\w)/, '.')
 }*/
 
+/*
 //@ best
 function SeriesSum(n) {
     for (var s = 0, i = 0; i < n; i++) {
@@ -361,4 +362,14 @@ function SeriesSum(n) {
 }
 
 const result = SeriesSum(5)
+console.log(result)*/
+
+/*?21 c*/
+function removeSmallest(numbers) {
+    let arr = [...numbers]
+    arr.splice(arr.indexOf(Math.min(...arr)), 1)
+    return arr
+}
+
+const result = removeSmallest([2, 2, 1, 2, 1])
 console.log(result)
