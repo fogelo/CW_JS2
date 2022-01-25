@@ -364,7 +364,8 @@ function SeriesSum(n) {
 const result = SeriesSum(5)
 console.log(result)*/
 
-/*?21 c*/
+/*?21 removeSmallest*/
+/*
 function removeSmallest(numbers) {
     let arr = [...numbers]
     arr.splice(arr.indexOf(Math.min(...arr)), 1)
@@ -372,4 +373,4 @@ function removeSmallest(numbers) {
 }
 
 const result = removeSmallest([2, 2, 1, 2, 1])
-console.log(result)
+console.log(result)*/
