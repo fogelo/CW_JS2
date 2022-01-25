@@ -21,6 +21,7 @@ const result = arrayDiff([1, 2, 2, 3], [1, 2])
 console.log(result)*/
 
 /*?2 Stop gninnipS My sdroW!*/
+/*
 function spinWords(string) {
     return string
         .split(' ')
@@ -31,3 +32,21 @@ function spinWords(string) {
 const result = spinWords("You are almost to the last test")
 console.log(result)
 
+*/
+
+/*§3 Find the odd int*/ /*§ разобраться с побитовыми операторами, в частности как это работает здесь*/
+
+/*//@ my
+function findOdd(A) {
+    for (let i = 0; i < A.length; i++) {
+        let arr = A.filter(item => item === A[i])
+        if (arr.length === 1 || arr.length % 2 !== 0)
+            return A[i]
+            }
+    return []
+}*/
+
+//@ best
+const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+const result = findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
+console.log(result)
