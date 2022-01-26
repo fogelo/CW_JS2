@@ -67,7 +67,7 @@ const result = likes(['Alex', 'Jacob', 'Mark', 'Max'])
 console.log(result)*/
 
 
-/*? Find The Parity Outlier*/
+/*? 5Find The Parity Outlier*/
 function findOutlier(integers) {
     let odd = integers.filter(item => item % 2 !== 0)
     let even = integers.filter(item => item % 2 === 0)
