@@ -67,7 +67,8 @@ const result = likes(['Alex', 'Jacob', 'Mark', 'Max'])
 console.log(result)*/
 
 
-/*? 5Find The Parity Outlier*/
+/*?5 Find The Parity Outlier*/
+/*
 function findOutlier(integers) {
     let odd = integers.filter(item => item % 2 !== 0)
     let even = integers.filter(item => item % 2 === 0)
@@ -75,4 +76,26 @@ function findOutlier(integers) {
 }
 
 const result = findOutlier([2, 4, 0, 100, 4, 11, 2602, 36])
+console.log(result)*/
+
+
+/*§6 Count the number of Duplicates*/ /*§разобраться как работает код в best варианте*/
+
+//@ my
+/*function duplicateCount(text) {
+    let newText = text.toLowerCase()
+    let notUniqChars = []
+    for (let i = 0; i < newText.length; i++) {
+        if (newText.includes(newText[i], i + 1)) {
+            notUniqChars.push(newText[i])
+        }
+    }
+    return [...new Set(notUniqChars)].length
+}*/
+
+//@ best
+function duplicateCount(text){
+    return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+}
+const result = duplicateCount("Indivisibilities")
 console.log(result)
