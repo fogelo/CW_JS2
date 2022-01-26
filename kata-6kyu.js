@@ -47,6 +47,22 @@ function findOdd(A) {
 }*/
 
 //@ best
-const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+/*const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
 const result = findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
+console.log(result)*/
+
+
+/*?4 Who likes it?*/
+function likes(names) {
+    let len = names.length
+    return len === 0 ? 'no one likes this'
+        : len === 1 ? `${names[0]} likes this`
+            : len === 2 ? `${names[0]} and ${names[1]} like this`
+                : len === 3 ? `${names[0]}, ${names[1]} and ${names[2]} like this`
+                    : len > 3 ? `${names[0]}, ${names[1]} and ${len - 2} others like this` : ''
+}
+
+
+const result = likes(['Alex', 'Jacob', 'Mark', 'Max'])
 console.log(result)
+
