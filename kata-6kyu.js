@@ -53,7 +53,7 @@ console.log(result)*/
 
 
 /*?4 Who likes it?*/
-function likes(names) {
+/*function likes(names) {
     let len = names.length
     return len === 0 ? 'no one likes this'
         : len === 1 ? `${names[0]} likes this`
@@ -64,5 +64,15 @@ function likes(names) {
 
 
 const result = likes(['Alex', 'Jacob', 'Mark', 'Max'])
-console.log(result)
+console.log(result)*/
 
+
+/*? Find The Parity Outlier*/
+function findOutlier(integers) {
+    let odd = integers.filter(item => item % 2 !== 0)
+    let even = integers.filter(item => item % 2 === 0)
+    return odd.length === 1 ? odd[0] : even[0]
+}
+
+const result = findOutlier([2, 4, 0, 100, 4, 11, 2602, 36])
+console.log(result)
