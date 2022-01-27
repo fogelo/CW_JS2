@@ -374,3 +374,14 @@ function removeSmallest(numbers) {
 
 const result = removeSmallest([2, 2, 1, 2, 1])
 console.log(result)*/
+
+/*?22 reverseWords*/
+
+function reverseWords(str) {
+    return str.split(' ')
+        .map(item=>item.split('').reverse().join(''))
+        .join(' ')
+}
+
+const result = reverseWords("This is an example!")
+console.log(result)

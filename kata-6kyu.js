@@ -93,9 +93,29 @@ console.log(result)*/
     return [...new Set(notUniqChars)].length
 }*/
 
+/*
 //@ best
 function duplicateCount(text){
     return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
 }
 const result = duplicateCount("Indivisibilities")
+console.log(result)*/
+
+
+/*?7 Duplicate Encoder*/
+
+/*
+function duplicateEncode(word) {
+
+    let uniqLetter = [...new Set([...word])]
+    for (let i = 0; i < uniqLetter.length; i++) {
+
+
+    }
+}
+
+const result = duplicateEncode('recede')
 console.log(result)
+
+*/
+
