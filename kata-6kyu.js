@@ -102,9 +102,10 @@ const result = duplicateCount("Indivisibilities")
 console.log(result)*/
 
 
-/*?7 Duplicate Encoder*/
+/*§7 Duplicate Encoder*/ /*§ разобраться с бестами*/
 
-function duplicateEncode(word) {
+//@ my
+/*function duplicateEncode(word) {
     let uniqChars = [...new Set([...word.toLowerCase()])]
     let allChars = [...word.toLowerCase()]
     let notUniqChars = []
@@ -122,7 +123,67 @@ function duplicateEncode(word) {
         }
     }
     return result.join('')
+}*/
+
+//@ best №1
+/*function duplicateEncode(word){
+    return word
+        .toLowerCase()
+        .split('')
+        .map( function (a, i, w) {
+            return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+        })
+        .join('');
+}*/
+
+//@ best №2
+/*function duplicateEncode(word) {
+    word = word.toLowerCase();
+    return word.replace(/./g, m => word.indexOf(m) == word.lastIndexOf(m) ? '(' : ')');
+}*/
+
+//@ best №3
+/*
+function duplicateEncode(word){
+    return word
+        .toLowerCase()
+        .split('')
+        .map( function (a, i, w) {
+            return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+        })
+        .join('');
+}
+*/
+
+/*
+const result = duplicateEncode('wOOxz)aOOOOeb')
+console.log(result)*/
+
+/*§8 Your order, please*/ /*§разобраться со своим решение проговорить, что оно делает и разобраться с решением best*/
+//@ my
+function order(words) {
+    if (words) {
+        let array = words.split(' ')
+        let result = []
+        for (let i = 0; i < array.length; i++) {
+            let number = array[i].match(/\d/g)[0]
+            result.push({id: number, string: array[i]})
+        }
+        result.sort((a, b) => Number(a.id) - Number(b.id))
+        return result.map(item => item.string).join(' ')
+    } else {
+        return ""
+    }
 }
 
-const result = duplicateEncode('wOOxz)aOOOOeb')
+//@ best
+/*function order(words){
+
+    return words.split(' ').sort(function(a, b){
+        return a.match(/\d/) - b.match(/\d/);
+    }).join(' ');
+}*/
+
+const result = order("is2 Thi1s T4est 3a")
 console.log(result)
+
