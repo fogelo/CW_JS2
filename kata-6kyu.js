@@ -104,18 +104,25 @@ console.log(result)*/
 
 /*?7 Duplicate Encoder*/
 
-/*
 function duplicateEncode(word) {
-
-    let uniqLetter = [...new Set([...word])]
-    for (let i = 0; i < uniqLetter.length; i++) {
-
-
+    let uniqChars = [...new Set([...word.toLowerCase()])]
+    let allChars = [...word.toLowerCase()]
+    let notUniqChars = []
+    let result = []
+    for (let i = 0; i < uniqChars.length; i++) {
+        if (allChars.filter(item => item === uniqChars[i]).length > 1) {
+            notUniqChars.push(uniqChars[i])
+        }
     }
+    for (let i = 0; i < allChars.length; i++) {
+        if (notUniqChars.some(item => item === allChars[i])) {
+            result.push(')')
+        } else {
+            result.push('(')
+        }
+    }
+    return result.join('')
 }
 
-const result = duplicateEncode('recede')
+const result = duplicateEncode('wOOxz)aOOOOeb')
 console.log(result)
-
-*/
-

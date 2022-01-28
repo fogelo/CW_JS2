@@ -377,6 +377,7 @@ console.log(result)*/
 
 /*?22 reverseWords*/
 
+/*
 function reverseWords(str) {
     return str.split(' ')
         .map(item=>item.split('').reverse().join(''))
@@ -384,4 +385,6 @@ function reverseWords(str) {
 }
 
 const result = reverseWords("This is an example!")
-console.log(result)
+console.log(result)*/
+
+/*?23 */
