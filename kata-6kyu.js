@@ -241,8 +241,9 @@ const result = solution("abc")
 console.log(result)*/
 
 
-/*?10  IP Validation*/
-
+/*§10  IP Validation*/
+//@ my
+/*
 function isValidIP(str) {
     if (/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(str)) {
         let arr = str.split('.')
@@ -254,8 +255,40 @@ function isValidIP(str) {
     }
     return false
 }
+*/
 
+
+//@ best №1
+/*
+* Что я узнал из этого решения?
+* Понял, что все таки можно было решить эту задачу одним регулярным выражением
+* */
+/*function isValidIP(str) {
+    return /^(([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])(\.(?!$)|$)){4}$/.test(str);
+}*/
+
+//@ best №2
+/*function isValidIP(str) {
+    return str.split('.').filter(item => item === Number(item).toString() && Number(item) < 256).length === 4;
+}*/
+
+/*
 const result = isValidIP('41.227.40.36')
 console.log(result)
+*/
 
 
+/*?11 Valid Phone Number*/
+
+function validPhoneNumber(phoneNumber){
+    return /\(\d{3}\)\s\d{3}-\d{4}/.test(phoneNumber)
+}
+
+const result = validPhoneNumber("(123) 456-7890")
+console.log(result)
+
+/*
+"(123) 456-7890"  => true
+"(1111)555 2345"  => false
+"(098) 123 4567"  => false
+*/
