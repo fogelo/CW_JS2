@@ -79,7 +79,7 @@ const result = findOutlier([2, 4, 0, 100, 4, 11, 2602, 36])
 console.log(result)*/
 
 
-/*§6 Count the number of Duplicates*/ /*§разобраться как работает код в best варианте*/
+/*§6 Count the number of Duplicates*/
 
 //@ my
 /*function duplicateCount(text) {
@@ -93,16 +93,21 @@ console.log(result)*/
     return [...new Set(notUniqChars)].length
 }*/
 
-/*
 //@ best
-function duplicateCount(text){
+/*
+* Что я узнал из этого решения? Узнал, что можно сделать проверку когда match возвращает null, а не сразу пытаться
+* обратиться к его свойству length. Можно учесть, что если match вернет не массив найденных элементов, а null можно вернуть пустой массив.
+* */
+/*function duplicateCount(text){
     return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
-}
-const result = duplicateCount("Indivisibilities")
+}*/
+
+
+/*const result = duplicateCount("")
 console.log(result)*/
 
 
-/*§7 Duplicate Encoder*/ /*§ разобраться с бестами*/
+/*§7 Duplicate Encoder*/
 
 //@ my
 /*function duplicateEncode(word) {
@@ -126,42 +131,43 @@ console.log(result)*/
 }*/
 
 //@ best №1
-/*function duplicateEncode(word){
+/*
+* Что я узнал из этого решения?
+* Узнал как можно использовать третий аргумент (массив) в методах массива
+* */
+
+/*function duplicateEncode(word) {
     return word
         .toLowerCase()
         .split('')
-        .map( function (a, i, w) {
+        .map(function (a, i, w) {
             return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
         })
         .join('');
 }*/
 
 //@ best №2
+/*
+* Что я узнал из этого решения?
+* В очередной раз убедился, что replace крутой метод. Он заменит каждое соответствие которое найдет на то, что вернет
+* функция переданная вторым аргументом
+* */
+
 /*function duplicateEncode(word) {
     word = word.toLowerCase();
-    return word.replace(/./g, m => word.indexOf(m) == word.lastIndexOf(m) ? '(' : ')');
+    return word.replace(/./g, m => word.indexOf(m) === word.lastIndexOf(m) ? '(' : ')');
 }*/
 
-//@ best №3
-/*
-function duplicateEncode(word){
-    return word
-        .toLowerCase()
-        .split('')
-        .map( function (a, i, w) {
-            return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
-        })
-        .join('');
-}
-*/
 
-/*
-const result = duplicateEncode('wOOxz)aOOOOeb')
+/*const result = duplicateEncode('wOOxz)aOOOOeb')
 console.log(result)*/
 
 /*§8 Your order, please*/ /*§разобраться со своим решение проговорить, что оно делает и разобраться с решением best*/
 //@ my
-function order(words) {
+/*
+* Благодаря своему решению понял как можно сортировать массив из объектов по их свойствам
+* */
+/*function order(words) {
     if (words) {
         let array = words.split(' ')
         let result = []
@@ -174,16 +180,65 @@ function order(words) {
     } else {
         return ""
     }
-}
+}*/
 
 //@ best
-/*function order(words){
+/*
+* Что я узнал из этого решения?
+* Узнал что с методом sort можно неординарно сортировать элементы массивов, можно их сортировать по их какой-то
+* отличительной особенности, например числу внутри слова
+*
+* */
 
+/*
+function order(words){
     return words.split(' ').sort(function(a, b){
         return a.match(/\d/) - b.match(/\d/);
     }).join(' ');
+}
+*/
+
+
+/*const result = order("is2 Thi1s T4est 3a")
+console.log(result)*/
+
+
+/*?9 Split Strings*/
+
+//@ my №1 (принял)
+/*function solution(str) {
+    if (str.length) {
+        let result = []
+        for (let i = 0; i < str.length; i += 2) {
+            result.push(str.slice(i, i + 2))
+        }
+        if (result[result.length - 1].length === 2) {
+            return result
+        } else {
+            result[result.length - 1] += '_'
+        }
+        return result
+    } else {
+        return []
+    }
 }*/
 
-const result = order("is2 Thi1s T4est 3a")
+
+/*//@ my №2 (примет если сделать что если на входе будет пустая строка функция вернет пустой массив)
+function solution(str) {
+    return str.length % 2 === 0 ? str.match(/\w\w/g) : str.match(/\w\w/g).concat([str[str.length - 1] + '_'])
+}*/
+
+//@ best
+/*
+* Действительно было проще сначала прибавить к строке '_' и уже потом делать манипуляции, если надо взять если нет отсечь
+*
+* */
+function solution(s){
+    return (s+"_").match(/.{2}/g)||[]
+}
+const result = solution("abc")
 console.log(result)
 
+
+// should return ['ab', 'c_']
