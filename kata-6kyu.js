@@ -234,11 +234,28 @@ function solution(str) {
 * Действительно было проще сначала прибавить к строке '_' и уже потом делать манипуляции, если надо взять если нет отсечь
 *
 * */
-function solution(s){
+/*function solution(s){
     return (s+"_").match(/.{2}/g)||[]
 }
 const result = solution("abc")
+console.log(result)*/
+
+
+/*?10  IP Validation*/
+
+function isValidIP(str) {
+    if (/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(str)) {
+        let arr = str.split('.')
+        return arr.every(item => /^2[0-4][0-9]$/.test(item)
+            || /^25[0-5]$/.test(item)
+            || /^1[0-9][0-9]$/.test(item)
+            || /^[1-9][0-9]$/.test(item)
+            || /^[0-9]$/.test(item))
+    }
+    return false
+}
+
+const result = isValidIP('41.227.40.36')
 console.log(result)
 
 
-// should return ['ab', 'c_']
