@@ -280,15 +280,53 @@ console.log(result)
 
 /*?11 Valid Phone Number*/
 
+/*
 function validPhoneNumber(phoneNumber){
     return /\(\d{3}\)\s\d{3}-\d{4}/.test(phoneNumber)
 }
 
 const result = validPhoneNumber("(123) 456-7890")
 console.log(result)
+*/
 
 /*
 "(123) 456-7890"  => true
 "(1111)555 2345"  => false
 "(098) 123 4567"  => false
 */
+
+
+/*§12 Encrypt this!*/ /*§ разобраться с best вариантами*/
+
+function encryptThis(text) {
+    let arr = text.split(' ')
+    let result = text.split(' ')
+    for (let i = 0; i < arr.length; i++) {
+        if (result[i].length > 2) {
+            let arr2 = [...result[i]]
+            arr2[1] = arr[i][arr[i].length - 1]
+            arr2[arr2.length - 1] = arr[i][1]
+            result[i] = arr2.join('')
+        }
+
+    }
+    return result.map((item) => item.charCodeAt(0) + item.slice(1)).join(' ')
+}
+
+const result = encryptThis("A wise old owl lived in an oak")
+console.log(result)
+
+
+/*
+assert.strictEqual(encryptThis("A"), "65");
+assert.strictEqual(encryptThis("A wise old owl lived in an oak"), "65 119esi 111dl 111lw 108dvei 105n 97n 111ka");
+assert.strictEqual(encryptThis("The more he saw the less he spoke"), "84eh 109ero 104e 115wa 116eh 108sse 104e 115eokp");
+assert.strictEqual(encryptThis("The less he spoke the more he heard"), "84eh 108sse 104e 115eokp 116eh 109ero 104e 104dare");
+assert.strictEqual(encryptThis("Why can we not all be like that wise old bird"), "87yh 99na 119e 110to 97ll 98e 108eki 116tah 119esi 111dl 98dri");
+assert.strictEqual(encryptThis("Thank you Piotr for all your help"), "84kanh 121uo 80roti 102ro 97ll 121ruo 104ple");
+*/
+
+
+let str = 'hello'
+str[0] = 'x'
+console.log(str)
