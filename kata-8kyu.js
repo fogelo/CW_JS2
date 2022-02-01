@@ -115,9 +115,22 @@ console.log(result)*/
 ?8. Century From Year
 */
 
+/*
 function century(year) {
     return Math.ceil(year/100);
 }
 
 const result = century(89)
+console.log(result)
+*/
+
+/*
+?9. Keep Hydrated!
+*/
+
+function litres(time) {
+    return Math.floor(time*0.5);
+}
+
+const result = litres(3)
 console.log(result)
