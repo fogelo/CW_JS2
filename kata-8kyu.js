@@ -128,9 +128,21 @@ console.log(result)
 ?9. Keep Hydrated!
 */
 
+/*
 function litres(time) {
     return Math.floor(time*0.5);
 }
 
 const result = litres(3)
+console.log(result)*/
+
+/*
+?9. Reversed Words
+*/
+
+function reverseWords(str) {
+    return str.split(' ').reverse().join(' ')
+}
+
+const result = reverseWords("hello world!")
 console.log(result)
