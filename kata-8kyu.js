@@ -137,12 +137,30 @@ const result = litres(3)
 console.log(result)*/
 
 /*
-?9. Reversed Words
+?10. Reversed Words
 */
 
+/*
 function reverseWords(str) {
     return str.split(' ').reverse().join(' ')
 }
 
 const result = reverseWords("hello world!")
 console.log(result)
+*/
+
+/*
+?11. Count of positives / sum of negatives
+*/
+
+function countPositivesSumNegatives(input) {
+    if ((input || []).length === 0)
+        return []
+    let positive = (input.filter(item => item > 0) || []).length
+    let negative = input.filter(item => item < 0).reduce((prev, item) => prev + item, 0)
+    return [positive, negative];
+}
+
+const result = countPositivesSumNegatives(null)
+console.log(result)
+
