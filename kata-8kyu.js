@@ -182,9 +182,21 @@ console.log(result)*/
 ?13. Do I get a bonus?
 */
 
+/*
 function bonusTime(salary, bonus) {
     return bonus ? '£' + String(salary) + '0' : '£' + String(salary)
 }
 
 const result = bonusTime(25000, false)
+console.log(result)*/
+
+/*
+?14. Count the Monkeys!
+*/
+
+function monkeyCount(n) {
+    return Array(n).fill(0).map((item,index)=>index+1)
+}
+
+const result = monkeyCount(10)
 console.log(result)
