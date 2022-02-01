@@ -170,9 +170,21 @@ console.log(result)
 ?12.Get the mean of an array
 */
 
+/*
 function getAverage(marks) {
     return Math.floor(marks.reduce((prev, item) => prev + item, 0) / marks.length)
 }
 
 const result = getAverage([1,2,3,4,5,])
+console.log(result)*/
+
+/*
+?13. Do I get a bonus?
+*/
+
+function bonusTime(salary, bonus) {
+    return bonus ? '£' + String(salary) + '0' : '£' + String(salary)
+}
+
+const result = bonusTime(25000, false)
 console.log(result)
