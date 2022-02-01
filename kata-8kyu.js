@@ -95,9 +95,18 @@ console.log(result)
 ?6. Is n divisible by x and y?
 */
 
+/*
 function isDivisible(n, x, y) {
     return n % x === 0 && n % y === 0
 }
 
 const result = isDivisible(11, 3, 4)
-console.log(result)
+console.log(result)*/
+
+
+/*
+?7. Convert a String to a Number!
+*/
+let stringToNumber = function(str){
+    return Number(str)
+}
