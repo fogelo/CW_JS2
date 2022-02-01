@@ -298,6 +298,7 @@ console.log(result)
 
 /*§12 Encrypt this!*/ /*§ разобраться с best вариантами*/
 
+/*
 function encryptThis(text) {
     let arr = text.split(' ')
     let result = text.split(' ')
@@ -315,6 +316,7 @@ function encryptThis(text) {
 
 const result = encryptThis("A wise old owl lived in an oak")
 console.log(result)
+*/
 
 
 /*
@@ -325,8 +327,3 @@ assert.strictEqual(encryptThis("The less he spoke the more he heard"), "84eh 108
 assert.strictEqual(encryptThis("Why can we not all be like that wise old bird"), "87yh 99na 119e 110to 97ll 98e 108eki 116tah 119esi 111dl 98dri");
 assert.strictEqual(encryptThis("Thank you Piotr for all your help"), "84kanh 121uo 80roti 102ro 97ll 121ruo 104ple");
 */
-
-
-let str = 'hello'
-str[0] = 'x'
-console.log(str)
