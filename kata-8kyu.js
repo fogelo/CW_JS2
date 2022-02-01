@@ -81,9 +81,23 @@ console.log(result)*/
 ?5. String cleaning
 */
 
+/*
 function stringClean(s){
     return s.replace(/\d/g, '')
 }
 
 const result = stringClean('abcABC123')
+console.log(result)
+*/
+
+
+/*
+?6. Is n divisible by x and y?
+*/
+
+function isDivisible(n, x, y) {
+    return n % x === 0 && n % y === 0
+}
+
+const result = isDivisible(11, 3, 4)
 console.log(result)
