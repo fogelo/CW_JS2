@@ -70,13 +70,20 @@ console.log(result)*/
 Your task is simply to count the total number of lowercase letters in a string.
 */
 
-function lowercaseCount(str) {
+/*function lowercaseCount(str) {
     return (str.match(/[a-z]/g) || []).length
 }
 
 const result = lowercaseCount('abcABC123')
-console.log(result)
+console.log(result)*/
 
 /*
 ?5. String cleaning
 */
+
+function stringClean(s){
+    return s.replace(/\d/g, '')
+}
+
+const result = stringClean('abcABC123')
+console.log(result)
