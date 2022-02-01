@@ -194,9 +194,34 @@ console.log(result)*/
 ?14. Count the Monkeys!
 */
 
+/*
 function monkeyCount(n) {
     return Array(n).fill(0).map((item,index)=>index+1)
 }
 
 const result = monkeyCount(10)
+console.log(result)*/
+
+/*
+?15. Total amount of points.
+*/
+
+function points(games) {
+    let result = 0
+    for (let i = 0; i < games.length; i++) {
+        let numbers = games[i].split(':')
+        numbers[0] > numbers[1] ? result += 3
+            : numbers[0] === numbers[1] ? result += 1 : ''
+    }
+    return result
+}
+
+
+const result = points(['1:0', '2:0', '3:0', '4:0', '2:1', '3:1', '4:1', '3:2', '4:2', '4:3'])
 console.log(result)
+
+/*
+if x>y - 3 points
+if x<y - 0 point
+if x=y - 1 point
+*/
