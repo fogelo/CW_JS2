@@ -107,6 +107,17 @@ console.log(result)*/
 /*
 ?7. Convert a String to a Number!
 */
-let stringToNumber = function(str){
+/*let stringToNumber = function(str){
     return Number(str)
+}*/
+
+/*
+?8. Century From Year
+*/
+
+function century(year) {
+    return Math.ceil(year/100);
 }
+
+const result = century(89)
+console.log(result)
