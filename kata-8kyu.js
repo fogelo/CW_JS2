@@ -153,6 +153,7 @@ console.log(result)
 ?11. Count of positives / sum of negatives
 */
 
+/*
 function countPositivesSumNegatives(input) {
     if ((input || []).length === 0)
         return []
@@ -163,4 +164,15 @@ function countPositivesSumNegatives(input) {
 
 const result = countPositivesSumNegatives(null)
 console.log(result)
+*/
 
+/*
+?12.Get the mean of an array
+*/
+
+function getAverage(marks) {
+    return Math.floor(marks.reduce((prev, item) => prev + item, 0) / marks.length)
+}
+
+const result = getAverage([1,2,3,4,5,])
+console.log(result)
