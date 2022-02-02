@@ -203,10 +203,10 @@ const result = monkeyCount(10)
 console.log(result)*/
 
 /*
-?15. Total amount of points.
+§15. Total amount of points. разобраться с best(легко)
 */
-
-function points(games) {
+//@ my
+/*function points(games) {
     let result = 0
     for (let i = 0; i < games.length; i++) {
         let numbers = games[i].split(':')
@@ -214,14 +214,32 @@ function points(games) {
             : numbers[0] === numbers[1] ? result += 1 : ''
     }
     return result
-}
+}*/
 
+//@ best
+/*
+const points=games=>games.reduce((output,current)=>{
+    return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
+},0)
 
 const result = points(['1:0', '2:0', '3:0', '4:0', '2:1', '3:1', '4:1', '3:2', '4:2', '4:3'])
 console.log(result)
+*/
 
 /*
 if x>y - 3 points
 if x<y - 0 point
 if x=y - 1 point
 */
+
+/*
+?16. Will you make it?
+*/
+
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    return fuelLeft*mpg-distanceToPump>=0
+};
+
+const result = zeroFuel(100,50,1)
+console.log(result)
