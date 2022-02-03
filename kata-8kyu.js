@@ -237,9 +237,32 @@ if x=y - 1 point
 */
 
 
+/*
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     return fuelLeft*mpg-distanceToPump>=0
 };
 
 const result = zeroFuel(100,50,1)
+console.log(result)*/
+
+/*
+?17. Count Odd Numbers below n
+*/
+//@ my
+/*function oddCount(n) {
+    let arr = []
+    for (let i = 1; i < n; i += 2) {
+        arr.push(i)
+    }
+    return arr.length
+}*/
+
+//@ best
+function oddCount(n) {
+    return Math.floor(n / 2)
+}
+
+// oddCount(15) //=> 7, i.e [1, 3, 5, 7, 9, 11, 13]
+
+const result = oddCount(15)
 console.log(result)
