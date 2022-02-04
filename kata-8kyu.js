@@ -266,3 +266,4 @@ function oddCount(n) {
 
 const result = oddCount(15)
 console.log(result)
+
