@@ -258,12 +258,27 @@ console.log(result)*/
 }*/
 
 //@ best
-function oddCount(n) {
+/*function oddCount(n) {
     return Math.floor(n / 2)
 }
 
 // oddCount(15) //=> 7, i.e [1, 3, 5, 7, 9, 11, 13]
 
 const result = oddCount(15)
-console.log(result)
+console.log(result)*/
 
+/*
+?18. Stringy Strings
+*/
+
+function stringy(size) {
+    let str = '';
+    for (let i = 1; i <= size; i++) {
+        str = str + i%2
+
+    }
+    return str;
+}
+
+const result = stringy(3)
+console.log(result)

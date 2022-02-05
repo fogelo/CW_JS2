@@ -217,3 +217,18 @@ function persistence(num) {
 let result = persistence(9999)
 console.log('result: ', result);*/
 
+/*sdfgdf*/
+
+/*
+* fgfdgfd
+* */
+
+
+/*? gfd;gjdsf;gkjdflgj*/
+
+/*§ dfgdfg dfg fdg dgfkjdsfkl*/
+
+/*! sfd sdfdsf sf d*/
+
+
+/**/
